@@ -24,7 +24,7 @@ export function Footer() {
               <div className="flex size-8 items-center justify-center rounded-lg bg-background text-foreground">
                 <Calendar className="size-4" />
               </div>
-              <span>Eventify</span>
+              <span>Bakul Events</span>
             </Link>
             <p className="text-sm text-background/70 leading-relaxed">
               Indonesia's premier event management platform. Discover, create,
@@ -99,11 +99,11 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-background/70">
               <li className="flex items-center gap-2">
                 <Mail className="size-4 shrink-0" />
-                <span>hello@eventify.id</span>
+                <span>hello@events.id</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="size-4 shrink-0" />
-                <span>+62 21 1234 5678</span>
+                <span>+62 82 1234 5678</span>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="size-4 shrink-0" />
@@ -116,7 +116,7 @@ export function Footer() {
         <Separator className="my-8 bg-background/20" />
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-background/50">
-          <p>© 2024 Eventify. All rights reserved.</p>
+          <p>© 2026 Bakul Events. All rights reserved.</p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-background/80 transition-colors">
               Privacy Policy
