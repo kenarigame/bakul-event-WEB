@@ -92,7 +92,7 @@ export function HomePage() {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative overflow-hidden  from-foreground via-foreground/95 to-foreground/90 text-background">
+      <section className="relative overflow-hidden bg-linear-to-br from-foreground via-foreground/95 to-foreground/90 text-background">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 size-96 rounded-full bg-primary/10 blur-3xl" />
           <div className="absolute -bottom-40 -left-40 size-96 rounded-full bg-primary/5 blur-3xl" />
@@ -111,7 +111,7 @@ export function HomePage() {
             </Badge>
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-balance mb-6">
               Discover & Experience{" "}
-              <span className="text-transparent bg-clip-text  from-amber-400 to-orange-400">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-amber-400 to-orange-400">
                 Unforgettable Events
               </span>
             </h1>
@@ -347,7 +347,6 @@ export function HomePage() {
               <Button
                 size="lg"
                 className="bg-amber-500 hover:bg-amber-600 text-white"
-                
               >
                 <Link to="/events">Explore Events</Link>
               </Button>
