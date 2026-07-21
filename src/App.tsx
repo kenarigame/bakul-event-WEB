@@ -2,7 +2,9 @@ import { PublicLayout } from "@/layouts/PublicLayout";
 import { Route, Routes } from "react-router-dom";
 
 // Public pages
-import { HomePage } from "./pages/public/Homepage";
+import { HomePage } from "./pages/public/HomePage";
+import { EventsPage } from "./pages/public/EventsPage";
+import { EventDetailPage } from "./pages/public/EventDetailPage";
 
 // Customer pages
 
@@ -16,9 +18,9 @@ export function App() {
       {/* Public routes */}
       <Route element={<PublicLayout />}>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/events" element={<EventsPage />} />
+        <Route path="/events" element={<EventsPage />} />
         <Route path="/events/:slug" element={<EventDetailPage />} />
-        <Route path="/login" element={<LoginPage />} />
+        {/* <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         <Route path="/reset-password" element={<ResetPasswordPage />} /> */}

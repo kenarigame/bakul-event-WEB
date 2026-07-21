@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 export function EventCardSkeleton() {
   return (
     <Card className="overflow-hidden p-0">
-      <Skeleton className="aspect-[16/9] w-full rounded-none" />
+      <Skeleton className="aspect-video w-full rounded-none" />
       <CardContent className="p-4">
         <Skeleton className="h-3 w-20 mb-2" />
         <Skeleton className="h-4 w-full mb-1" />

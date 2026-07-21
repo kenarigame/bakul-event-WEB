@@ -28,7 +28,7 @@ export function EventCard({ event, index = 0 }: EventCardProps) {
       <Link to={`/events/${event.slug}`}>
         <Card className="group overflow-hidden border hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 p-0">
           {/* Thumbnail */}
-          <div className="relative aspect-[16/9] overflow-hidden bg-muted">
+          <div className="relative aspect-video overflow-hidden bg-muted">
             {event.thumbnail ? (
               <img
                 src={event.thumbnail}
@@ -36,7 +36,7 @@ export function EventCard({ event, index = 0 }: EventCardProps) {
                 className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             ) : (
-              <div className="flex size-full items-center justify-center bg-gradient-to-br from-primary/20 to-primary/5">
+              <div className="flex size-full items-center justify-center bg-linear-to-br from-primary/20 to-primary/5">
                 <Calendar className="size-12 text-primary/40" />
               </div>
             )}
