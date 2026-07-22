@@ -16,8 +16,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { authApi } from "@/services/api.service";
 import { useAuthStore } from "@/store/auth.store";
+import { authApi } from "@/services/api.service";
 
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email"),
@@ -41,6 +41,30 @@ export function LoginPage() {
   } = useForm<LoginForm>({
     resolver: zodResolver(loginSchema),
   });
+  // test user dummy
+  // const onSubmit = (data: LoginForm) => {
+  //   const account = dummyUsers.find(
+  //     (user) => user.email === data.email && user.password === data.password,
+  //   );
+
+  //   if (!account) {
+  //     toast.error("Email atau password salah");
+  //     return;
+  //   }
+
+  //   const { password, ...user } = account;
+
+  //   setAuth(user, "dummy-access-token", "dummy-refresh-token");
+
+  //   toast.success(`Welcome back, ${user.name}!`);
+
+  //   const redirectMap: Record<User["role"], string> = {
+  //     CUSTOMER: "/dashboard",
+  //     ORGANIZER: "/organizer/dashboard",
+  //     ADMIN: "/admin/dashboard",
+  //   };
+
+  //   navigate(from || redirectMap[user.role]);
 
   const onSubmit = async (data: LoginForm) => {
     try {
