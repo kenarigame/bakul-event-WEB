@@ -41,7 +41,69 @@ export function LoginPage() {
   } = useForm<LoginForm>({
     resolver: zodResolver(loginSchema),
   });
+  // onSubmit user dummy
+  // const onSubmit = async (data: LoginForm) => {
+  //   const users = [
+  //     {
+  //       id: "1",
+  //       name: "Admin",
+  //       email: "admin@test.com",
+  //       password: "123456",
+  //       role: "ADMIN" as const,
+  //       referralCode: "ADMIN001",
+  //     },
+  //     {
+  //       id: "2",
+  //       name: "Organizer",
+  //       email: "organizer@test.com",
+  //       password: "123456",
+  //       role: "ORGANIZER" as const,
+  //       referralCode: "ORG001",
+  //       organizer: {
+  //         id: "org-1",
+  //         userId: "2",
+  //         name: "Bakul Events Organizer",
+  //         city: "Jakarta",
+  //       },
+  //     },
+  //     {
+  //       id: "3",
+  //       name: "Customer",
+  //       email: "customer@test.com",
+  //       password: "123456",
+  //       role: "CUSTOMER" as const,
+  //       referralCode: "CUS001",
+  //     },
+  //   ];
 
+  //   const user = users.find(
+  //     (u) => u.email === data.email && u.password === data.password,
+  //   );
+
+  //   if (!user) {
+  //     toast.error("Invalid email or password");
+  //     return;
+  //   }
+
+  //   const { password, ...userData } = user;
+
+  //   const accessToken = "dummy-access-token";
+  //   const refreshToken = "dummy-refresh-token";
+
+  //   setAuth(userData, accessToken, refreshToken);
+
+  //   toast.success(`Welcome back, ${userData.name}!`);
+
+  //   const redirectMap = {
+  //     CUSTOMER: "/dashboard",
+  //     ORGANIZER: "/organizer/dashboard",
+  //     ADMIN: "/admin/dashboard",
+  //   };
+
+  //   navigate(from || redirectMap[userData.role] || "/dashboard");
+  // };
+
+  // onSubmit ke API
   const onSubmit = async (data: LoginForm) => {
     try {
       const response = await authApi.login(data.email, data.password);

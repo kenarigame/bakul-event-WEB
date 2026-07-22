@@ -131,7 +131,7 @@ export function CreateEventPage() {
               <Label>Event Name *</Label>
               <Input
                 {...register("name")}
-                placeholder="Amazing Tech Conference 2024"
+                placeholder="Amazing Tech Conference 2026"
                 className="mt-1"
               />
               {errors.name && (

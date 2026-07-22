@@ -87,7 +87,7 @@ export function AppSidebar({ role }: AppSidebarProps) {
           <div className="flex size-7 items-center justify-center rounded-md bg-primary text-primary-foreground">
             <Calendar className="size-4" />
           </div>
-          <span>Eventify</span>
+          <span>Bakul Events</span>
         </NavLink>
       </SidebarHeader>
 
