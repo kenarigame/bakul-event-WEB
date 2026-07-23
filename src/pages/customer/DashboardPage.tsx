@@ -148,15 +148,16 @@ export function CustomerDashboardPage() {
 
       <div className="flex gap-3">
         <Button>
-          <Link to="/events">
-            <Calendar className="mr-2 size-4" />
-            Browse Events
+          <Link to="/events" className="flex items-center gap-2">
+            <Calendar className="size-4" />
+            <span>Browse Events</span>
           </Link>
         </Button>
+
         <Button variant="outline">
-          <Link to="/points">
-            <Gift className="mr-2 size-4" />
-            View Points
+          <Link to="/points" className="flex items-center gap-2">
+            <Gift className="size-4" />
+            <span>View Points</span>
           </Link>
         </Button>
       </div>
