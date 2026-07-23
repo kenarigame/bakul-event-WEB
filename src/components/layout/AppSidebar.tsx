@@ -28,6 +28,7 @@ import {
 import { useAuthStore } from "@/store/auth.store";
 import { authApi } from "@/services/api.service";
 import { toast } from "sonner";
+import { cn } from "@/lib/utils";
 
 const customerNav = [
   { href: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
@@ -105,19 +106,20 @@ export function AppSidebar({ role }: AppSidebarProps) {
             <SidebarMenu>
               {navItems.map((item) => (
                 <SidebarMenuItem key={item.href}>
-                  <SidebarMenuButton>
-                    <NavLink
-                      to={item.href}
-                      className={({ isActive }) =>
+                  <NavLink
+                    to={item.href}
+                    className={({ isActive }) =>
+                      cn(
+                        "flex h-8 w-full items-center gap-3 rounded-md px-2 text-sm transition-colors",
                         isActive
                           ? "bg-sidebar-accent text-sidebar-accent-foreground"
-                          : ""
-                      }
-                    >
-                      <item.icon className="size-4" />
-                      <span>{item.label}</span>
-                    </NavLink>
-                  </SidebarMenuButton>
+                          : "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
+                      )
+                    }
+                  >
+                    <item.icon className="size-4 shrink-0" />
+                    <span>{item.label}</span>
+                  </NavLink>
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
